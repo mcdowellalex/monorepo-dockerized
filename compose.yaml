@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    volumes:
+      # mount your code folder into the app folder
+      - ./backend:/app/backend
+    ports:
+      - "3000:3000"
+    command: npm run dev
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    environment:
+      - NODE_ENV=development

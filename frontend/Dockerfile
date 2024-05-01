@@ -4,7 +4,7 @@ FROM node:${NODE_VERSION}
 
 WORKDIR /app/frontend
 
-COPY . .
+COPY ./frontend .
 
 RUN npm install
 

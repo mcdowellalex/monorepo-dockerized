@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # start backend docker container
-cd backend
-docker compose watch &&
+# cd backend
+docker compose up frontend backend -d
 
-echo "... backend container running 🎉..."
+# echo "... backend container running 🎉..."
 
-cd ../frontend
-docker compose up
+# cd ../frontend
+# docker compose up
