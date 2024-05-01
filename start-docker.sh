@@ -1,10 +1,19 @@
 #!/bin/bash
 
+echo "\n======================"
+echo "\n...starting backend...\n"
+
 # start backend docker container
-# cd backend
-docker compose up frontend backend -d
+docker compose up backend -d
 
-# echo "... backend container running 🎉..."
+echo "\n... backend container running 🎉..."
 
-# cd ../frontend
-# docker compose up
+echo "\n\n...starting frontend..."
+
+# start backend docker container
+docker compose up backend -d
+
+echo "\n... frontend container running 🎉..."
+echo "\n======================\n"
+
+echo "visit localhost:5173 in your browser to see the UI\n"
