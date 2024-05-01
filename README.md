@@ -1,5 +1,7 @@
 # A dockerized monorepo
 
+The intent of this repo is to be a structure for a fullstack monorepo with an easy developer experience (docker containers with hot reloading and a one start command that works for everyone)
+
 #### frontend
 
 React + Vite + TypeScript
