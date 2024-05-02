@@ -8,9 +8,9 @@ docker compose up backend -d
 
 echo "\n... backend container running 🎉..."
 
+# start frontend docker container
 echo "\n\n...starting frontend..."
 
-# start backend docker container
 docker compose up frontend -d
 
 echo "\n... frontend container running 🎉..."
