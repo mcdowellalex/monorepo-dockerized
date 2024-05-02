@@ -1,16 +1,7 @@
 version: "3"
 
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: ./backend/Dockerfile
-    volumes:
-      # mount your code folder into the app folder
-      - ./backend:/app/backend
-    ports:
-      - "3000:3000"
-    command: npm run dev
+  # FRONTEND COMPOSE
   frontend:
     build:
       context: .
@@ -22,3 +13,30 @@ services:
       - /app/frontend/node_modules
     environment:
       - NODE_ENV=development
+
+  # BACKEND COMPOSE
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    volumes:
+      # mount your code folder into the app folder
+      - ./backend:/app/backend
+    ports:
+      - "3000:3000"
+    command: npm run dev
+
+  # DATABASE COMPOSE for mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+
+volumes:
+  mongodb_data:
