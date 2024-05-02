@@ -16,4 +16,4 @@ docker compose up frontend -d
 echo "\n... frontend container running 🎉..."
 echo "\n======================\n"
 
-echo "visit localhost:5173 in your browser to see the UI\n"
+echo "if it did not open automatically, visit localhost:5173 in your browser to see the UI\n"

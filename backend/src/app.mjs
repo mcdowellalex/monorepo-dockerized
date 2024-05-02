@@ -13,7 +13,7 @@ app.use((err, _req, res, next) => {
 });
 
 app.get("/", function (req, res) {
-  res.status(200).send(" world!");
+  res.status(200).send("hello world!");
 });
 
 // start the server
