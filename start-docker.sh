@@ -11,7 +11,7 @@ echo "\n... backend container running 🎉..."
 echo "\n\n...starting frontend..."
 
 # start backend docker container
-docker compose up backend -d
+docker compose up frontend -d
 
 echo "\n... frontend container running 🎉..."
 echo "\n======================\n"
