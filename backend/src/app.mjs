@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
-import { db_onstart } from "./db/db_onstart.js";
+import { db_onstart } from "./db/db_onstart.mjs";
 import countRoutes from "./routes/count.mjs";
+import userRoutes from "./routes/user.mjs";
 
 // server config and setup
 const port = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ db_onstart();
 
 // add your routes here
 app.use("/count", countRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", function (req, res) {
   res.status(200).send("hello world! test");
