@@ -12,7 +12,7 @@ NodeJS (esm) + ExpressJS
 
 #### database
 
-MongoDB local image https://hub.docker.com/_/mongo
+Postgresql -- download pgadmin, tableplus, or some other db gui to view it
 
 ### Quickstart
 
