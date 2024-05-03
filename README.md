@@ -12,7 +12,7 @@ NodeJS (esm) + ExpressJS
 
 #### database
 
-Postgresql -- download pgadmin, tableplus, or some other db gui to view it
+Postgresql
 
 ### Quickstart
 
@@ -23,6 +23,12 @@ Postgresql -- download pgadmin, tableplus, or some other db gui to view it
 
 #### checking out the db
 
-1. download [mongodb compass](https://www.mongodb.com/products/tools/compass)
-2. create a new connection with uri: `mongodb://localhost:27017`
-3. make sure to add the username and password by going to advanced connection options > authentication and adding `username: admin` and `password: password` (can find and update these in the mongodb service section of the `./compose.yaml` )
+1. download your favorite db admin gui, I like [TablePlus](https://tableplus.com/)
+2. create a new connection with the following
+
+```text
+User: user
+Password: password
+Database: mydatabase
+Port: 5432
+```
