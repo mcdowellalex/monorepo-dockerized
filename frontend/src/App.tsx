@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import axios from "axios";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [helloworld, setHelloWorld] = useState(null);
+  const [count, setCount] = useState(null);
 
   useEffect(() => {
     // Define the endpoint URL of your Express backend
@@ -14,7 +14,7 @@ function App() {
       .get(apiUrl)
       .then((response) => {
         // Handle successful response
-        setData(response.data);
+        setHelloWorld(response.data);
       })
       .catch((error) => {
         // Handle error
@@ -22,7 +22,31 @@ function App() {
       });
   }, []);
 
-  return <div>{data}</div>;
+  function handleIncrement() {
+    // Define the endpoint URL of your Express backend
+    const apiUrl = "http://localhost:3000/count";
+
+    // Make a GET request to the backend endpoint
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        // Handle successful response
+        console.log(response);
+        setCount(response.data.count);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error fetching data:", error);
+      });
+  }
+
+  return (
+    <div>
+      <div>On mount API call to "/": {helloworld}</div>
+      <div>Count stored in mongodb: {count}</div>
+      <button onClick={handleIncrement}>Increment count</button>
+    </div>
+  );
 }
 
 export default App;

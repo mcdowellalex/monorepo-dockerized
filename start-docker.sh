@@ -3,10 +3,10 @@
 echo "\n======================"
 
 
-# start mongodb docker container
-echo "\n...starting mongodb...\n"
-docker compose up mongodb -d
-echo "\n... mongodb container running 🎉..."
+# start postgresql docker container
+echo "\n...starting postgresql...\n"
+docker compose up postgresql -d 
+echo "\n... postgresql container running 🎉..."
 
 # start backend docker container
 echo "\n...starting backend...\n"
