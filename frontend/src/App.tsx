@@ -4,7 +4,6 @@ import axios from "axios";
 function App() {
   const [count, setCount] = useState(null);
   const [users, setUsers] = useState([]);
-  console.log(users);
 
   useEffect(() => {
     axios
@@ -31,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <div>On mount API call to "/usres"</div>
+      <div>On mount API call to "/users"</div>
       <ul>
         {users
           ? users.map((user) => {
