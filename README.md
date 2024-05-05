@@ -18,7 +18,7 @@ Postgresql
 
 ## Quickstart
 
-1. download [docker desktop](https://www.docker.com/products/docker-desktop/) and make sure the app is open
+1. download [docker desktop](https://www.docker.com/products/docker-desktop/) (if you don't already have it on your machine) and make sure the app is open
 2. clone repo
 3. cd to root directory
 4. run `sh nuke-docker.sh` to make sure your docker is properly cleaned out
