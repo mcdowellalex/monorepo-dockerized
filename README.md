@@ -35,3 +35,7 @@ Password: password
 Database: mydatabase
 Port: 5432
 ```
+
+#### demo video
+
+![demo video](./demo-video-monorepo-dockerized-.gif)

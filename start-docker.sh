@@ -21,6 +21,9 @@ echo "\n... frontend container running 🎉..."
 
 echo "\n======================\n"
 
+# sleep for one second to wait for docker to finish
+sleep 1
+
 # use custom shell command to open frontend
 source open-frontend.sh
 open_frontend http://localhost:5173
