@@ -2,36 +2,25 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [helloworld, setHelloWorld] = useState(null);
   const [count, setCount] = useState(null);
+  const [users, setUsers] = useState([]);
+  console.log(users);
 
   useEffect(() => {
-    // Define the endpoint URL of your Express backend
-    const apiUrl = "http://localhost:3000/";
-
-    // Make a GET request to the backend endpoint
     axios
-      .get(apiUrl)
+      .get("http://localhost:3000/users")
       .then((response) => {
-        // Handle successful response
-        setHelloWorld(response.data);
+        setUsers(response.data);
       })
       .catch((error) => {
-        // Handle error
         console.error("Error fetching data:", error);
       });
   }, []);
 
   function handleIncrement() {
-    // Define the endpoint URL of your Express backend
-    const apiUrl = "http://localhost:3000/count";
-
-    // Make a GET request to the backend endpoint
     axios
-      .get(apiUrl)
+      .get("http://localhost:3000/count")
       .then((response) => {
-        // Handle successful response
-        console.log(response);
         setCount(response.data.count);
       })
       .catch((error) => {
@@ -42,7 +31,19 @@ function App() {
 
   return (
     <div>
-      <div>On mount API call to "/": {helloworld}</div>
+      <div>On mount API call to "/usres"</div>
+      <ul>
+        {users
+          ? users.map((user) => {
+              return (
+                <div style={{ marginBottom: "5px" }}>
+                  <div>username: {user.username}</div>
+                  <div>email: {user.email}</div>
+                </div>
+              );
+            })
+          : null}
+      </ul>
       <div>Count stored in mongodb: {count}</div>
       <button onClick={handleIncrement}>Increment count</button>
     </div>

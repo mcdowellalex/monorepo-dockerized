@@ -14,7 +14,6 @@ const db_onstart = () => {
     .then(() => {
       console.log("Connected to PostgreSQL");
 
-      // SQL query to create a table
       const createCountTableQuery = `
         CREATE TABLE IF NOT EXISTS count (
           id SERIAL PRIMARY KEY,
@@ -52,17 +51,14 @@ const db_onstart = () => {
     })
     .then(() => {
       console.log('Table "count" created successfully');
-
+      User.create({
+        username: "janedoe",
+        email: "janedoe@example.com",
+      });
       return User.create({
         username: "johndoe",
         email: "johndoe@example.com",
       });
-      // SQL query to insert a default value into the table
-      // const insertUserQuery = `
-      //   INSERT INTO users (username, email) VALUES ('johndoe', 'johndoe@example.com')
-      // `;
-      // // Insert default value into the table
-      // return client.query(insertUserQuery);
     })
     .then(() => {
       console.log("Default value inserted into the table");
@@ -71,7 +67,6 @@ const db_onstart = () => {
       console.error("Error connecting to PostgreSQL:", err);
     })
     .finally(() => {
-      // End the client connection
       client.end();
     });
 };
