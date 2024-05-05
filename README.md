@@ -16,10 +16,11 @@ Postgresql
 
 ### Quickstart
 
-1. clone repo
-2. cd to root directory
-3. run `sh nuke-docker.sh` to make sure your docker is properly cleaned out
-4. run `sh start-docker.sh` to startup everything
+1. download [docker desktop](https://www.docker.com/products/docker-desktop/)
+2. clone repo
+3. cd to root directory
+4. run `sh nuke-docker.sh` to make sure your docker is properly cleaned out
+5. run `sh start-docker.sh` to startup everything
 
 #### checking out the db
 
