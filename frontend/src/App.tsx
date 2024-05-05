@@ -35,7 +35,7 @@ function App() {
         {users
           ? users.map((user) => {
               return (
-                <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "5px" }} key={user.username}>
                   <div>username: {user.username}</div>
                   <div>email: {user.email}</div>
                 </div>
