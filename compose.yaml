@@ -22,6 +22,7 @@ services:
     volumes:
       # mount your code folder into the app folder
       - ./backend:/app/backend
+      - /app/backend/node_modules
     ports:
       - "3000:3000"
     command: npm run dev
