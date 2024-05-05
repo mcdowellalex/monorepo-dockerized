@@ -1,4 +1,4 @@
-# A dockerized monorepo
+# Dockerized monorepo
 
 ## Repo summary
 
