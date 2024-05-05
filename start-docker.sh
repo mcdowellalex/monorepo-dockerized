@@ -21,4 +21,10 @@ echo "\n... frontend container running 🎉..."
 
 echo "\n======================\n"
 
+# use custom shell command to open frontend
+source open-frontend.sh
+open_frontend http://localhost:5173
+
 echo "if it did not open automatically, visit localhost:5173 in your browser to see the UI\n"
+
+
