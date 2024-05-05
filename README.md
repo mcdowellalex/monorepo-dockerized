@@ -1,20 +1,22 @@
 # A dockerized monorepo
 
+## Repo summary
+
 The intent of this repo is to be a structure for a fullstack monorepo with an easy developer experience (docker containers with hot reloading and a one start command that works for everyone)
 
-#### frontend
+**frontend**
 
 React + Vite + TypeScript
 
-#### backend
+**backend**
 
 NodeJS (esm) + ExpressJS
 
-#### database
+**database**
 
 Postgresql
 
-### Quickstart
+## Quickstart
 
 1. download [docker desktop](https://www.docker.com/products/docker-desktop/)
 2. clone repo
