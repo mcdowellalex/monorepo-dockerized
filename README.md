@@ -6,15 +6,15 @@ The intent of this repo is to be a structure for a fullstack monorepo with an ea
 
 **frontend**
 
-React + Vite + TypeScript
+[React + Vite + TypeScript ](https://vitejs.dev/)
 
 **backend**
 
-NodeJS (esm) + ExpressJS
+[NodeJS (esm) + ExpressJS](https://expressjs.com/)
 
 **database**
 
-Postgresql
+[Postgresql](https://www.postgresql.org/)
 
 ## Quickstart
 
